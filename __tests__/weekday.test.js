@@ -47,3 +47,11 @@ describe('inputDate', () => {
     expect(inputDate.dayOfWeekName).toEqual('Saturday');
   });
 })
+
+describe('checkInput', () => {
+
+  test('should return an empty string', () => {
+    expect(checkInput()).toEqual('');
+  });
+
+})

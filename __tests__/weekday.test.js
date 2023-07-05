@@ -1,4 +1,4 @@
-import inputDate from '../src/weekday.js';
+import InputDate from "../src/weekday";
 
 describe('inputDate', () => {
   let date;
@@ -6,7 +6,7 @@ describe('inputDate', () => {
 
   beforeEach(() => {
     date = new Date('7/5/2023');
-    inputDate = new inputDate(date, date.getDay(), '')
+    inputDate = new InputDate(date, date.getDay(), '')
   });
 
   test('should correctly create an inputDate object with three properties', () => {

@@ -11,7 +11,39 @@ describe('inputDate', () => {
   });
 
   test('should correctly update dayOfWeekName with the weekday name', () => {
-    const inputDate = new InputDate('7/5/2023', date.getDay(), '');
+    let date = new Date('7/2/2023');
+    let inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Sunday');
+    
+    date = new Date('7/3/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Monday');
+    
+    date = new Date('7/4/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Tuesday');
+    
+    date = new Date('7/5/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
     expect(inputDate.dayOfWeekName).toEqual('Wednesday');
+    
+    date = new Date('7/6/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Thursday');
+    
+    date = new Date('7/7/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Friday');
+    
+    date = new Date('7/8/2023');
+    inputDate = new InputDate(date, date.getDay(), '');
+    inputDate.getDayName();
+    expect(inputDate.dayOfWeekName).toEqual('Saturday');
   });
 })

@@ -27,9 +27,6 @@ export class InputDate {
     else if (this.dayOfWeek === 6) {
       this.dayOfWeekName = 'Saturday';
     }
+    return this.dayOfWeekName;
   }
-}
-
-export function checkInput() {
-  return '';
 }

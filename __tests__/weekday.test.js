@@ -1,4 +1,4 @@
-import { InputDate, checkInput } from "../src/weekday";
+import { InputDate } from "../src/weekday";
 
 describe('InputDate', () => {
 
@@ -45,16 +45,5 @@ describe('InputDate', () => {
     inputDate = new InputDate(date, date.getDay(), '');
     inputDate.getDayName();
     expect(inputDate.dayOfWeekName).toEqual('Saturday');
-  });
-})
-
-describe('checkInput', () => {
-
-  test('should return an empty string', () => {
-    expect(checkInput()).toEqual('');
-  });
-
-  test('should return an error message if the date is invalid', () => {
-    expect(checkInput(Date('test'))).toEqual('Invalid date.');
   });
 })

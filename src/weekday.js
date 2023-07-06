@@ -1,4 +1,4 @@
-export default class InputDate {
+export class InputDate {
   constructor(date, dayOfWeek, dayOfWeekName) {
     this.date = date;
     this.dayOfWeek = dayOfWeek;
@@ -28,4 +28,8 @@ export default class InputDate {
       this.dayOfWeekName = 'Saturday';
     }
   }
+}
+
+export function checkInput() {
+  return '';
 }

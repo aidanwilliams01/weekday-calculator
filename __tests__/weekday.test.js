@@ -1,6 +1,6 @@
-import InputDate from "../src/weekday";
+import { InputDate, checkInput } from "../src/weekday";
 
-describe('inputDate', () => {
+describe('InputDate', () => {
 
   test('should correctly create an inputDate object with three properties', () => {
     const date = new Date();
@@ -54,4 +54,7 @@ describe('checkInput', () => {
     expect(checkInput()).toEqual('');
   });
 
+  test('should return an error message if the date is invalid', () => {
+    expect(checkInput(Date('test'))).toEqual('Invalid date.');
+  });
 })
